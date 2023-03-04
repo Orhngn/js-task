@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS İnput İle Dizi Oluşturma</title>
+</head>
+
+<body>
+    <center>
+        <h1>JS İnput İle Dizi Oluşturma</h1>
+
+        <label for="">Şehir Giriniz :</label>
+        <input type="text" name="" id="city" placeholder="Şehir giriniz">
+        <button onclick="sehirEkle()">EKLE</button>
+        <!-- <p>buraya düz yazacak : <span id="duz"></span></p>
+        <p>ankaranın indexof yazımı : <span id="duzindex"></span></p> -->
+        <p>buraya sirali yazacak : <span id="sirali"></span></p>
+        <p>ankaranın indexof yazımı <span id="siraliindex"></span></p>
+    </center>
+
+
+
+    <script>
+        const sehir = [];
+        let i = 0;
+
+        // function sehirEkle() {
+        //     const eleman = document.getElementById('city').value;
+        //     sehir.push(eleman);
+        //     i++;
+        //     document.getElementById('city').value = '';
+        //     document.getElementById('duz').innerHTML = i + ' adet ' + sehir;
+        //     document.getElementById('duzindex').innerHTML = sehir.indexOf('ankara');
+
+
+        // }
+        function sehirEkle() {
+            const elemansirali = document.getElementById('city').value;
+            sehir.push(elemansirali);
+            sehir.sort();
+            i++;
+            document.getElementById('city').value = '';
+            document.getElementById('sirali').innerHTML = i + ' adet ' + sehir;
+            document.getElementById('siraliindex').innerHTML = sehir.indexOf('ankara');
+
+
+        }
+
+
+
+
+
+
+    </script>
+
+
+
+</body>
+
+</html>
